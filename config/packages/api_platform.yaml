@@ -1,0 +1,8 @@
+api_platform:
+  title: Habit Tracker API
+  version: 1.0.0
+  defaults:
+    stateless: true
+  formats:
+    jsonld: ['application/ld+json']
+    json: ['application/json']

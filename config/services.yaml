@@ -1,0 +1,17 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+
+  App\:
+    resource: '../src/'
+
+  App\Domain\Habit\Repository\HabitRepositoryInterface: '@App\Infrastructure\Persistence\DoctrineHabitRepository'
+
+  App\Application\Habit\Service\CommandBus:
+    arguments:
+      $bus: '@command.bus'
+
+  App\Application\Habit\Service\QueryBus:
+    arguments:
+      $bus: '@query.bus'
